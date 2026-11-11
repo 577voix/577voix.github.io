@@ -1,0 +1,39 @@
+:root {
+  --bg: #F7F7F5; --surface: #FFFFFF; --text: #14181F; --muted: #5B6573; --line: #E3E5E8;
+  --pour: #1E9E63; --contre: #D23F37; --abst: #C9920F; --accent: #14181F;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1217; --surface: #151B24; --text: #F2F4F7; --muted: #9AA4B2; --line: #263040;
+    --pour: #3DBB7E; --contre: #E5534B; --abst: #E9B949; --accent: #F2F4F7;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1217; --surface: #151B24; --text: #F2F4F7; --muted: #9AA4B2; --line: #263040;
+  --pour: #3DBB7E; --contre: #E5534B; --abst: #E9B949; --accent: #F2F4F7;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header.site { border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 16px; flex-wrap: wrap; }
+.brand { font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: var(--text); text-decoration: none; }
+.brand .bar { display: inline-flex; gap: 3px; margin-right: 10px; vertical-align: 2px; }
+.brand .bar i { display: block; width: 6px; height: 16px; border-radius: 2px; }
+.tagline { color: var(--muted); font-size: 15px; }
+main { padding: 32px 0 48px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.02em; }
+h2 { font-size: 22px; margin: 36px 0 8px; }
+p, li { color: var(--text); }
+.lead { font-size: 19px; color: var(--muted); margin-top: 0; }
+a { color: inherit; text-underline-offset: 3px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; margin: 24px 0; }
+.small { font-size: 14px; color: var(--muted); }
+footer.site { border-top: 1px solid var(--line); padding: 20px 0 40px; font-size: 14px; color: var(--muted); }
+footer.site nav { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 8px; }
