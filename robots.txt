@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://577voix.github.io/sitemap.xml
